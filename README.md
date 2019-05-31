@@ -3,6 +3,10 @@ java experience | practice | demo
 
 
 
+### jdbc
+
+[分层操作数据 pojo dao service commons](jdbc/jdbcProject/src/com/niliv/application/DepartmentsApplication.java)
+
 ## net
 
 [网络知识点练习](net/source/readme.md)
