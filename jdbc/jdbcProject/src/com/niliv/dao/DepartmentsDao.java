@@ -3,6 +3,7 @@ package com.niliv.dao;
 import java.util.List;
 
 import com.niliv.pojo.Departments;
+import com.niliv.pojo.Users;
 
 public interface DepartmentsDao extends BaseDao {
 	public List<Departments> selectDepartmentsByName(String departments_name);

@@ -5,8 +5,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.PseudoColumnUsage;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.tools.JavaCompiler;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -74,5 +77,35 @@ public class BaseDaoImpl implements BaseDao {
 		}
 		return deptList;
 	}
-
+	/**
+	 * 批量操作
+	 */
+	@Override
+	public int[] excuteBatch(String sql, List<Object[]> list) {
+		
+		Connection conn=null;
+		PreparedStatement statement=null;
+		int[] arr = null;
+		try {
+			conn = JdbcUtil.getConnection();
+			conn.setAutoCommit(false);
+			statement = conn.prepareStatement(sql);
+			int count = statement.getParameterMetaData().getParameterCount();
+			for (int i = 0; i < list.size(); i++) {
+				
+				for (int j = 0; j < count; j++) {
+					statement.setObject(j+1, list.get(i)[j]);
+				}
+				statement.addBatch();
+			}
+			arr = statement.executeBatch();
+			conn.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			JdbcUtil.rollback(conn);
+		}finally {
+			JdbcUtil.closeResource(statement, conn ,null);
+		}
+		return arr;
+	}
 }

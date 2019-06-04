@@ -9,6 +9,7 @@ import java.util.List;
 import com.niliv.commons.JdbcUtil;
 import com.niliv.dao.DepartmentsDao;
 import com.niliv.pojo.Departments;
+import com.niliv.pojo.Users;
 /**
  * DepartmentsDao实现类
  * @author Administrator
@@ -98,3 +99,12 @@ public class DepartmentsDaoImpl extends BaseDaoImpl implements DepartmentsDao {
 	}
 
 }
+
+
+
+
+
+
+
+
+
