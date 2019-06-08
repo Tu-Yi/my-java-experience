@@ -17,7 +17,7 @@ java experience | practice | demo
 
 [多表查询-多—集合-自动映射](mybatis/mybatisDemo_resultMap_1+n_automapping)
 
-
+[注解](mybatis/mybatisDemo_annotation)
 
 ### jdbc
 
