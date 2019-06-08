@@ -19,6 +19,8 @@ java experience | practice | demo
 
 [注解](mybatis/mybatisDemo_annotation)
 
+[部门员工练习](mybatis/myBatisProject)
+
 ### jdbc
 
 [分层操作数据 pojo dao service commons](jdbc/jdbcProject/src/com/niliv/application/DepartmentsApplication.java)
