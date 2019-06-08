@@ -3,6 +3,22 @@ java experience | practice | demo
 
 
 
+### mybatis
+
+[多表查询-业务装配](mybatis/mybatisDemo_query)
+
+[多表查询-多—对象](mybatis/mybatisDemo_resultMap_n+1)
+
+[多表查询-多—对象-关联](mybatis/mybatisDemo_resultMap_n+1_association)
+
+[多表查询-多—集合](mybatis/mybatisDemo_resultMap_1+n)
+
+[多表查询-多—集合-关联](mybatis/mybatisDemo_resultMap_1+n_association)
+
+[多表查询-多—集合-自动映射](mybatis/mybatisDemo_resultMap_1+n_automapping)
+
+
+
 ### jdbc
 
 [分层操作数据 pojo dao service commons](jdbc/jdbcProject/src/com/niliv/application/DepartmentsApplication.java)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.niliv.mapper.ClazzMapper">
+  	<resultMap type="clazz" id="cmap">
+  		<id property="id" column="id" />
+  		<collection property="stus" select="com.niliv.mapper.StudentMapper.selByCid" column="id"></collection>
+  	</resultMap>
+  	<select id="selAll" resultMap="cmap">
+  		select * from t_class
+  	</select>
+  </mapper>

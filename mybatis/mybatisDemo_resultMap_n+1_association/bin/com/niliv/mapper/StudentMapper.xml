@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.niliv.mapper.StudentMapper">
+  	<resultMap type="student" id="smap">
+  		<id property="id" column="sid" />
+  		<result property="name" column="sname" />
+  		<result property="age" column="age" />
+  		<result property="gender" column="gender" />
+  		<result property="cid" column="cid" />
+  		<association property="clazz" javaType="clazz">
+  			<id property="id" column="cid" />
+  			<result property="name" column="cname" />
+  			<result property="room" column="room" />
+  		</association>
+  	</resultMap>
+  	<select id="selAll" resultMap="smap">
+  		SELECT
+			s.id sid,
+			s.name sname,
+			s.age,
+			s.gender,
+			c.id cid,
+			c.name cname,
+			c.room 
+		FROM
+			t_student s
+		LEFT JOIN t_class c ON s.cid = c.id
+  	</select>
+  </mapper>
