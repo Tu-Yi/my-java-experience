@@ -3,6 +3,8 @@ package com.niliv.dao.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.niliv.dao.UserDao;
 import com.niliv.pojo.User;
@@ -49,6 +51,39 @@ public class UserDaoImpl implements UserDao {
 		String sql = "insert into t_user values(default,?,?)";
 		System.out.println(uname+pwd);
 		return DBUtil.executeDML(sql, uname,pwd);
+	}
+
+	@Override
+	public List<User> selUserInfoDao() {
+		
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		List<User> users = null;
+		
+		try {
+			conn = DBUtil.getConnection();
+			String sql = "select * from t_user";
+			ps=conn.prepareStatement(sql);
+			rs=ps.executeQuery();
+			users = new ArrayList<>();
+			while(rs.next()) {
+				User user=new User();
+				user.setId(rs.getInt("id"));
+				user.setUname(rs.getString("uname"));
+				user.setPwd(rs.getString("pwd"));
+				users.add(user);
+			}
+			System.out.println(users);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.closeAll(rs, ps, conn);
+		}
+		
+		return users;
 	}
 
 }

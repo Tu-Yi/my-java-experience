@@ -1,5 +1,7 @@
 package com.niliv.service.impl;
 
+import java.util.List;
+
 import com.niliv.dao.UserDao;
 import com.niliv.dao.impl.UserDaoImpl;
 import com.niliv.pojo.User;
@@ -19,6 +21,12 @@ public class UserServiceImpl implements UserService {
 	public int regUserInfoService(String uname, String pwd) {
 		
 		return ud.regUserInfoDao(uname,pwd);
+	}
+
+	@Override
+	public List<User> selUserInfoService() {
+		
+		return ud.selUserInfoDao();
 	}
 
 

@@ -2,6 +2,7 @@ package com.niliv.servlet;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -88,6 +89,19 @@ public class DataServlet extends BaseServlet {
 			response.sendRedirect("/jsProject/login.jsp");
 
 		}
+	}
+	
+	public void selUserInfo(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		UserService uService = new UserServiceImpl();
+		List<User> users = uService.selUserInfoService();
+		request.setAttribute("users", users);
+		try {
+			request.getRequestDispatcher("userList.jsp").forward(request, response);
+		} catch (ServletException e) {
+			
+			e.printStackTrace();
+		}
+		return;
 	}
 
 }

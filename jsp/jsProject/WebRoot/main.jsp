@@ -24,18 +24,14 @@
   <div class="logo margin-big-left fadein-top">
     <h1><img src="images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
   </div>
-  <div class="head-l" style="float:right;margin-right:20px;"><span style="font-size:1rem;">当前用户：<%=((User)session.getAttribute("user")).getUname()  %></span>  &nbsp;&nbsp;<a id="out" class="button button-little bg-red" href="data?method=userOut"><span class="icon-power-off"></span> 退出登录</a> </div>
+  <div class="head-l" style="float:right;margin-right:20px;"><span style="font-size:1rem;">当前用户：${sessionScope.user.uname}</span>  &nbsp;&nbsp;<a id="out" class="button button-little bg-red" href="data?method=userOut"><span class="icon-power-off"></span> 退出登录</a> </div>
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
   <h2><span class="icon-user"></span>基本设置</h2>
   <ul style="display:block">
-    <li><a href="info.html" target="right"><span class="icon-caret-right"></span>网站设置</a></li>
-    <li><a href="pass.html" target="right"><span class="icon-caret-right"></span>修改密码</a></li>
-    <li><a href="page.html" target="right"><span class="icon-caret-right"></span>单页管理</a></li>  
-    <li><a href="adv.html" target="right"><span class="icon-caret-right"></span>首页轮播</a></li>   
-    <li><a href="book.html" target="right"><span class="icon-caret-right"></span>留言管理</a></li>     
-    <li><a href="column.html" target="right"><span class="icon-caret-right"></span>栏目管理</a></li>
+    <li><a href="data?method=selUserInfo" target="right"><span class="icon-caret-right"></span>查询用户信息</a></li>
+
   </ul>   
   <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>
   <ul>
