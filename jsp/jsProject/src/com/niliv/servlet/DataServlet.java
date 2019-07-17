@@ -11,8 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.niliv.pojo.Employee;
 import com.niliv.pojo.User;
+import com.niliv.service.EmployeeService;
 import com.niliv.service.UserService;
+import com.niliv.service.impl.EmployeeServiceImpl;
 import com.niliv.service.impl.UserServiceImpl;
 
 /**
@@ -97,6 +100,19 @@ public class DataServlet extends BaseServlet {
 		request.setAttribute("users", users);
 		try {
 			request.getRequestDispatcher("userList.jsp").forward(request, response);
+		} catch (ServletException e) {
+			
+			e.printStackTrace();
+		}
+		return;
+	}
+	
+	public void selEmployeeInfo(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		EmployeeService eService = new EmployeeServiceImpl();
+		List<Employee> employees = eService.selEmployeeInfoService();
+		request.setAttribute("employees", employees);
+		try {
+			request.getRequestDispatcher("employeeList.jsp").forward(request, response);
 		} catch (ServletException e) {
 			
 			e.printStackTrace();

@@ -31,7 +31,7 @@
   <h2><span class="icon-user"></span>基本设置</h2>
   <ul style="display:block">
     <li><a href="data?method=selUserInfo" target="right"><span class="icon-caret-right"></span>查询用户信息</a></li>
-
+    <li><a href="data?method=selEmployeeInfo" target="right"><span class="icon-caret-right"></span>查询员工信息</a></li>
   </ul>   
   <h2><span class="icon-pencil-square-o"></span>栏目管理</h2>
   <ul>
