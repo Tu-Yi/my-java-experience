@@ -29,6 +29,18 @@ public class UserServiceImpl implements UserService {
 		return ud.selUserInfoDao();
 	}
 
+	@Override
+	public int delUserInfoService(String id) {
+		
+		return ud.delUserInfoDao(id);
+	}
+
+	@Override
+	public User valUserName(String name) {
+		
+		return ud.valUserName(name);
+	}
+
 
 
 }

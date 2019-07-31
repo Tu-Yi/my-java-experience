@@ -86,4 +86,43 @@ public class UserDaoImpl implements UserDao {
 		return users;
 	}
 
+	@Override
+	public int delUserInfoDao(String id) {
+		
+		String sql = "delete from t_user where id=?";
+		return DBUtil.executeDML(sql, id);
+	}
+
+	@Override
+	public User valUserName(String name) {
+		
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		User user=null;
+		
+		try {
+			conn = DBUtil.getConnection();
+			String sql = "select * from t_user where uname=?";
+			ps=conn.prepareStatement(sql);
+			ps.setString(1, name);
+			rs=ps.executeQuery();
+			while(rs.next()) {
+				user=new User();
+				user.setId(rs.getInt("id"));
+				user.setUname(rs.getString("uname"));
+				user.setPwd(rs.getString("pwd"));
+			}
+			System.out.println(user);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.closeAll(rs, ps, conn);
+		}
+		
+		return user;
+	}
+
 }

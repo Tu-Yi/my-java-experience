@@ -29,15 +29,20 @@
       <td width="5%">${user.id}</td>
       <td width="15%">${user.uname}</td>
       <td width="10%">${user.pwd}</td>
-      <td width="10%"><div class="button-group"> <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="javascript:void(0)" onclick="return del(1,2)"><span class="icon-trash-o"></span> 删除</a> </div></td>
+      <td width="10%"><div class="button-group"> <a class="button border-main" href="cateedit.html"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="javascript:void(0)" onclick="del('${user.id}')" ><span class="icon-trash-o"></span> 删除</a> </div></td>
     </tr>
     </c:forEach>
   </table>
 </div>
 <script type="text/javascript">
-function del(id,mid){
-	if(confirm("您确定要删除吗?")){			
-		
+function del(id){
+	if(confirm("您确定要删除吗?")){
+		$.get("data",{method:'delUserInfo',id},(data)=>{
+			if(JSON.parse(data).msg){
+				alert("用户删除成功")
+				window.location.href="data?method=selUserInfo"
+			}
+		})
 	}
 }
 </script>

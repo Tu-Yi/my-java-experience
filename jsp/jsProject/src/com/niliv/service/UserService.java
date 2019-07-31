@@ -12,4 +12,8 @@ public interface UserService {
 
 	List<User> selUserInfoService();
 
+	int delUserInfoService(String id);
+
+	User valUserName(String name);
+
 }

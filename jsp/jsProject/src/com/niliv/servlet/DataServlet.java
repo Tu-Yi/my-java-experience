@@ -11,10 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.Gson;
+import com.niliv.pojo.Area;
 import com.niliv.pojo.Employee;
 import com.niliv.pojo.User;
+import com.niliv.service.AreaService;
 import com.niliv.service.EmployeeService;
 import com.niliv.service.UserService;
+import com.niliv.service.impl.AreaServiceImpl;
 import com.niliv.service.impl.EmployeeServiceImpl;
 import com.niliv.service.impl.UserServiceImpl;
 
@@ -119,5 +123,46 @@ public class DataServlet extends BaseServlet {
 		}
 		return;
 	}
+	
+	public void delUserInfo(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String id = request.getParameter("id");
+		UserService uService = new UserServiceImpl();
+		int i = uService.delUserInfoService(id);
+		if(i>0) {
+			response.getWriter().write("{\"msg\":\"1\"}");
+		}else {
+			response.getWriter().write("{\"msg\":\"0\"}");
+		}
+	}
+	
+	public void valUserName(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String name = request.getParameter("name");
+		UserService uService = new UserServiceImpl();
+		User user = uService.valUserName(name);
+		
+		if(user==null) {
+			response.getWriter().write("用户名可以注册");
+		}else {
+			response.getWriter().write("用户名已经被注册");
+		}
+	}
+	
+	public void getAreaInfoByName(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String areaName = request.getParameter("name");
+		String parentId = request.getParameter("parentId");
+		AreaService aService = new AreaServiceImpl();
+		List<Area> areas = aService.getAreaInfoByNameService(areaName,parentId);
+		response.getWriter().write(new Gson().toJson(areas));
+	}
 
 }
+
+
+
+
+
+
+
+
+
+

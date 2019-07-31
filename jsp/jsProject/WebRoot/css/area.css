@@ -1,0 +1,120 @@
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+/*让容器里的元素在页面上居中*/
+body {
+	height: 100vh;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	display: flex;
+	position: relative;
+	margin-right: 20px;
+}
+
+.inputWrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.inputWrapper+button {
+	background: #3988fb;
+	border: none;
+	font-size: 14px;
+	padding: 0 20px;
+	color: #ffffff;
+}
+
+.inputWrapper+button:focus {
+	outline: none;
+}
+
+.inputWrapper+button:hover {
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+	background: #3781f0;
+}
+
+.floatDiv {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	color: #b8b8b8;
+}
+
+.splitLine {
+	width: 0;
+	height: 16px;
+	border-left: 1px solid;
+	margin: 0 10px;
+}
+
+input {
+	border: 1px solid #b8b8b8;
+	width: 240px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 8px;
+	font-size: 15px;
+}
+
+.inputWrapper svg.icon {
+	width: 20px;
+	height: 20px;
+	fill: #b8b8b8;
+}
+
+.inputWrapper svg.icon:hover {
+	width: 20px;
+	height: 20px;
+	fill: #4b94fc;
+	cursor: pointer;
+}
+
+input:focus {
+	outline: none;
+	border-color: #4b94fc;
+}
+input:focus+span svg.icon {
+	fill: #4b94fc;
+}
+
+.suggestion {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	border: 1px solid #4b94fc;
+	width: 240px;
+}
+
+.suggestion li {
+	padding: 5px;
+}
+
+.suggestion.active {
+	display: block;
+}
