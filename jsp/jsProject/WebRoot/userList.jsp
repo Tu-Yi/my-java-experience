@@ -35,14 +35,26 @@
   </table>
 </div>
 <script type="text/javascript">
-function del(id){
+function del(uid){
+	//判断用户选择是否发起ajax请求进行用户信息删除
 	if(confirm("您确定要删除吗?")){
-		$.get("data",{method:'delUserInfo',id},(data)=>{
-			if(JSON.parse(data).msg){
-				alert("用户删除成功")
-				window.location.href="data?method=selUserInfo"
+		//发起ajax请求进行用户信息的删除
+		$.get("data",{method:"delUserInfo",id:uid},function(data){
+			console.log(data)
+			//判断用户是否是权限不足
+			
+			if("power"==data){
+				alert("权限不足");
+			}else if(data.length<15){//判断返回的是否是删除成功的字符串，还是session失效后的登录页面
+				if(JSON.parse(data).msg){
+					alert("用户删除成功");
+					window.location.href="data?method=selUserInfo";
+				}
+			}else{
+				window.top.location.href="login.jsp";
 			}
-		})
+			
+		});
 	}
 }
 </script>

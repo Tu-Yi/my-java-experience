@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.google.gson.Gson;
 import com.niliv.pojo.Area;
 import com.niliv.pojo.Employee;
+import com.niliv.pojo.Url;
 import com.niliv.pojo.User;
 import com.niliv.service.AreaService;
 import com.niliv.service.EmployeeService;
@@ -67,6 +68,9 @@ public class DataServlet extends BaseServlet {
 		System.out.println(user);
 		HttpSession hs = request.getSession();
 		if(user!=null) {
+			List<Url> lu = uService.getUserUrlInfoService(user.getId());
+			System.out.println(lu);
+			hs.setAttribute("lu", lu);
 			hs.setAttribute("user", user);
 			response.sendRedirect("/jsProject/main.jsp");
 		}else {

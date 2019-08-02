@@ -2,6 +2,7 @@ package com.niliv.dao;
 
 import java.util.List;
 
+import com.niliv.pojo.Url;
 import com.niliv.pojo.User;
 
 public interface UserDao {
@@ -15,5 +16,7 @@ public interface UserDao {
 	int delUserInfoDao(String id);
 
 	User valUserName(String name);
+
+	List<Url> getUserUrlInfoDao(int id);
 
 }

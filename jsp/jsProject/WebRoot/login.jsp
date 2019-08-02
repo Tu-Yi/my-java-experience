@@ -14,6 +14,12 @@
 <link rel="stylesheet" href="css/admin.css">
 <script src="js/jquery.js"></script>
 <script src="js/pintuer.js"></script>
+    <script type="text/javascript">
+    	//判断登录页面是不是顶层页面，如果不是则将其设置为顶层页面（解决框架中出现了登录页面）
+    	if(window !=top){
+    		top.location.href=location.href;
+    	}
+    </script>
 </head>
 <body>
 	<div class="bg"></div>
@@ -36,7 +42,7 @@
 								<div style="text-align: center; color: red;">用户注册成功</div>
 							</c:when>
 						</c:choose>
-						<c:remove var="flag" scope="session"/>
+						<%session.invalidate(); %>
 						<div class="panel-body"
 							style="padding: 30px; padding-bottom: 10px; padding-top: 10px;">
 							<div class="form-group">

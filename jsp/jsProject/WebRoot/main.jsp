@@ -24,7 +24,15 @@
   <div class="logo margin-big-left fadein-top">
     <h1><img src="images/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />后台管理中心</h1>
   </div>
-  <div class="head-l" style="float:right;margin-right:20px;"><span style="font-size:1rem;">当前用户：${sessionScope.user.uname}</span>  &nbsp;&nbsp;<a id="out" class="button button-little bg-red" href="data?method=userOut"><span class="icon-power-off"></span> 退出登录</a> </div>
+  <div class="head-l" style="float:left;margin-left:200px;padding-top:10px;color:#fff;">
+  	<span>当前在线人数为：${applicationScope.count}</span>
+  </div>
+  <div class="head-l" style="float:right;margin-right:50px;">
+  <span style="font-size:1rem;">当前用户：${sessionScope.user.uname}</span>
+    &nbsp;&nbsp;<a id="out" class="button button-little bg-red" href="data?method=userOut">
+    <span class="icon-power-off"></span> 退出登录</a> 
+  </div>
+	
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>

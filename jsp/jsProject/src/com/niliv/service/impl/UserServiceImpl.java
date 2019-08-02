@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.niliv.dao.UserDao;
 import com.niliv.dao.impl.UserDaoImpl;
+import com.niliv.pojo.Url;
 import com.niliv.pojo.User;
 import com.niliv.service.UserService;
 
@@ -39,6 +40,12 @@ public class UserServiceImpl implements UserService {
 	public User valUserName(String name) {
 		
 		return ud.valUserName(name);
+	}
+
+	@Override
+	public List<Url> getUserUrlInfoService(int id) {
+		
+		return ud.getUserUrlInfoDao(id);
 	}
 
 

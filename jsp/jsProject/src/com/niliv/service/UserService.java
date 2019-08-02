@@ -2,6 +2,7 @@ package com.niliv.service;
 
 import java.util.List;
 
+import com.niliv.pojo.Url;
 import com.niliv.pojo.User;
 
 public interface UserService {
@@ -15,5 +16,7 @@ public interface UserService {
 	int delUserInfoService(String id);
 
 	User valUserName(String name);
+
+	List<Url> getUserUrlInfoService(int id);
 
 }
