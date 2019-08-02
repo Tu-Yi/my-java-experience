@@ -1,6 +1,7 @@
 package com.niliv.filter;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.Filter;
@@ -87,34 +88,36 @@ public class MyFilter implements Filter{
 		//获取此次请求的method
 		String method=req.getParameter("method");
 		System.out.println("当前请求的uri为:"+uri);
+		Calendar c = Calendar.getInstance();
+        // 获取当前时间的小时
+        int hour = c.get(Calendar.HOUR_OF_DAY);
 		//放行登录页面  放行登录请求 放行静态资源
 		if("/jsProject/login.jsp".equals(uri) || ("/jsProject/data".equals(uri)&& "userLogin".equals(method)) || uri.startsWith("/jsProject/css/") || uri.startsWith("/jsProject/js/")|| uri.startsWith("/jsProject/images/")){
 			//放行
 			chain.doFilter(request, response);
 		}else{
-		//session管理(session统一校验)
-			//获取Session对象
-			HttpSession session = req.getSession();
-			Object obj=session.getAttribute("user");
-		//判断
-			if(obj!=null){
-				//获取权限信息
-				List<Url> lu=(List<Url>) session.getAttribute("lu");
-			//权限校验
-				for(Url url:lu){
-					if(url.getLocation().equals(method) || url.getLocation().equals(uri)){
-						//放行
-						chain.doFilter(request, response);
-						return;
+			if(hour >= 6 && hour < 20) {
+				HttpSession session = req.getSession();
+				Object obj=session.getAttribute("user");
+				if(obj!=null){
+					List<Url> lu=(List<Url>) session.getAttribute("lu");
+					for(Url url:lu){
+						if(url.getLocation().equals(method) || url.getLocation().equals(uri)){
+							//放行
+							chain.doFilter(request, response);
+							return;
+						}
 					}
+					resp.getWriter().write("power");
+					return;
+				}else{
+					resp.sendRedirect("/jsProject/login.jsp");
 				}
-			//响应
-				resp.getWriter().write("power");
-				return;
-			}else{
-				//重定向到登录页面
-				resp.sendRedirect("/jsProject/login.jsp");
+			}else {
+				String str = hour < 6 ? "6点后再来！" : "明天6点再来！";
+	            response.getWriter().write("<h3>本时间段禁止登陆操作，请" + str + "</h3>");
 			}
+			
 		}
 	}
 	@Override
