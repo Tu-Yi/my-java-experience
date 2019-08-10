@@ -52,5 +52,20 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return this.empDao.update(emp);
 	}
 
+	@Override
+	public Employee login(String empId, String password) {
+		System.out.println(empId);
+		Employee emp = this.empDao.findById(empId);
+		if(emp==null) {
+			return null;
+		}else {
+			if(password!=null && password.equals(emp.getPassword())) {
+				return emp;
+			}else {
+				return null;
+			}
+		}
+	}
+
 
 }

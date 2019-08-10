@@ -36,6 +36,57 @@ public class EmployeeServlet extends BaseServlet {
         // TODO Auto-generated constructor stub
     }
     
+    /**
+	 * 注销操作
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public void logout(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//结束当前的session
+		request.getSession().invalidate();
+		
+		//跳转到登录页面:注销之后建议使用重定向跳转到登录页面
+		response.sendRedirect(request.getContextPath()+"/login.jsp");
+		
+	}
+	/**
+	 * 登录操作
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public void login(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//获取登录信息
+		String empId = request.getParameter("empId");
+		String password = request.getParameter("password");
+		
+//		String verifyCode = request.getParameter("verifyCode");//用户输入的验证码
+//		String randStr = (String)request.getSession().getAttribute("randStr");//正确的验证码
+//		if(verifyCode ==null || !verifyCode.equals(randStr)){
+//			request.setAttribute("error", "验证码错误");
+//			request.getRequestDispatcher("/login.jsp").forward(request, response);
+//			return;//return不可少  
+//		}
+		//调用业务层完成登录操作
+		EmployeeService  empService = new EmployeeServiceImpl();
+		Employee emp =empService.login(empId,password);
+		
+		//页面跳转
+		if(emp != null){
+			//将员工信息保存在session中
+			request.getSession().setAttribute("emp", emp);//!!!!!
+			response.sendRedirect(request.getContextPath()+"/main.html");
+		}else{
+			request.setAttribute("error", "用户名或者密码错误");
+			request.getRequestDispatcher("/login.jsp").forward(request, response);
+		}
+	}
+    
     public void toUpdate(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		

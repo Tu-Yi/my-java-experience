@@ -23,6 +23,7 @@ public interface EmployeeService {
 	public void delete(String empId);
 	public Employee findById(String empId);
 	public int update(Employee emp);
+	public Employee login(String empId, String password);
 	
 	
 }

@@ -292,6 +292,7 @@ public class EmployeeDaoImpl  implements EmployeeDao {
 				//1.取出当前行各个字段的值
 				//String empId = rs.getString("empId");//??
 				String realName = rs.getString("realName");//??
+				String password = rs.getString("password");
 				String sex = rs.getString("sex");
 				Date birthDate = rs.getDate("birthDate");
 				Date hireDate = rs.getDate("hireDate");
@@ -317,7 +318,7 @@ public class EmployeeDaoImpl  implements EmployeeDao {
 				Employee mgr = new Employee();
 				mgr.setEmpId(mgrId);
 					
-				emp = new Employee(empId, null, realName, sex, birthDate, hireDate, leaveDate, onDuty, empType, phone, qq, emerContactPerson, idCard, dept, position, mgr);
+				emp = new Employee(empId, password, realName, sex, birthDate, hireDate, leaveDate, onDuty, empType, phone, qq, emerContactPerson, idCard, dept, position, mgr);
 				
 								
 			}
@@ -367,6 +368,8 @@ public class EmployeeDaoImpl  implements EmployeeDao {
 		};
 		return DBUtil.executeUpdate(sql, params);
 	}
+
+
 
 
 
