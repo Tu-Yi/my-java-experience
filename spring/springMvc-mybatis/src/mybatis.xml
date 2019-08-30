@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 设置日志常量 -->
+	<settings>
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	<!-- 给类型起别名 -->
+	<!-- 
+	<typeAliases>
+		表示该包下面的所有类的简单类名即为别名
+		<package name="com.bjsxt.pojo"/>
+	</typeAliases>
+	 -->
+	<!-- 注册映射文件 -->
+	<!-- 
+	<mappers>
+		<package name="com.bjsxt.mapper"/>
+	</mappers>
+	 -->
+</configuration>
