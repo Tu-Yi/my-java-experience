@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2523"
+   name=""
+   committed-date="2006-08-03T02:38:17.930085Z"
+   url="http://concept/repos/rd/hollycc/trunk/webapp/framework/dtree/img"
+   last-author="zhanggq"
+   kind="dir"
+   uuid="7bb0b9ba-600e-0410-b8d1-95469110b31c"
+   repos="http://concept/repos/rd"
+   revision="6034"/>
+<entry
+   committed-rev="2523"
+   name="folder.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="ea16980ab437fa6ba4aba3d480e83e9e"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="musicfolder.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="21ece951734f23adb2f75befe1f31fc1"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="page.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="c25b136c1cb3bb145495c25b35d93754"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="minusbottom.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="b09d684cca7135ef728141aaf2464baa"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="trash.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="6cbfd3ed29531044aed9b4edb3cca9ad"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="nolines_minus.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="eb2243a354ffcfac93ba0fe948f7167d"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="plus.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="5c55d798909c553deca31d610bd18fac"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="joinbottom.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="4b3daa7f2cc584f1aac0d142275d7cba"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="cd.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="f41037663522fab5c5c31530c7fa43d8"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="line.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="63ab38a6203262f15ca46c631232ea2c"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="globe.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="d6b48614cf8dc9553e077c19197637d2"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="minus.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="d647fbbd0ec410b8f3bb3357b62eedcf"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="folderopen.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="18aa3d75315bf95bf080357733437fcc"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="empty.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="df22aff6e941ff1cc577333d1712b584"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="join.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="4d5d614e0da056df815a4306d6368692"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="question.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="ea0ca196ce0ebfd625cc1210abfdec6c"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="plusbottom.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="1924ce363c38a992f888a4df48c0b274"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="imgfolder.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="1d488d377762e65ab4e8b691ba01e5a4"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="nolines_plus.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="ec92b634b63608fb4b0dbf114e3b89e1"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:56.000000Z"/>
+<entry
+   committed-rev="2523"
+   name="base.gif"
+   text-time="2006-08-16T06:16:58.000000Z"
+   committed-date="2006-08-03T02:38:17.930085Z"
+   checksum="1f71b021e061a4948d69adc4ff10ccad"
+   last-author="zhanggq"
+   kind="file"
+   prop-time="2006-08-16T06:16:58.000000Z"/>
+</wc-entries>
