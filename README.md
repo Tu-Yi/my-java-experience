@@ -9,6 +9,10 @@ java experience | practice | demo
 
 [ssm](spring/springmvc-mybatis)
 
+[ssm_maven_idea](spring/ssm)
+
+[ssm_maven_eclipse](spring/how2j_ssm_maven)
+
 ### javaee
 
 [尚学堂OA](javaee/sxtoa)
