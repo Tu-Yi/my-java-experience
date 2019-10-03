@@ -21,6 +21,18 @@ java experience | practice | demo
 
 [base_project(mybatis,tranc)](spring/spingboot/base_project(mybatis,tranc))
 
+[base_project(redis)](spring/spingboot/base_project(redis))
+
+[base_project(schedule)](spring/spingboot/base_project(schedule))
+
+[base_project(log)](spring/spingboot/base_project(log))
+
+[base_project(elasticsearch)](spring/base_project(elasticsearch))
+
+[base_project(activemq)](spring/spingboot/base_project(activemq))
+
+[base_project(rocketmq)](spring/spingboot/base_project(rocketmq))
+
 ### javaee
 
 [尚学堂OA](javaee/sxtoa)
