@@ -1,0 +1,5 @@
+net/xdclass/base_project/utils/JsonUtils.class
+net/xdclass/base_project/controller/UserController.class
+net/xdclass/base_project/XdclassApplication.class
+net/xdclass/base_project/domain/User.class
+net/xdclass/base_project/domain/JsonData.class

@@ -33,6 +33,8 @@ java experience | practice | demo
 
 [base_project(rocketmq)](spring/spingboot/base_project(rocketmq))
 
+[base_project(webflux)](spring/spingboot/base_project(webflux))
+
 ### javaee
 
 [尚学堂OA](javaee/sxtoa)
