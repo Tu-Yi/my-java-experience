@@ -3,6 +3,12 @@ java experience | practice | demo
 
 
 
+### demo
+
+[springboot-xdvideo](demo/xdvideo)
+
+[c-sleeve](demo/c-sleeve)
+
 ### spring
 
 [ssj](spring/springmvc-jdbc)
@@ -34,6 +40,8 @@ java experience | practice | demo
 [base_project(rocketmq)](spring/spingboot/base_project(rocketmq))
 
 [base_project(webflux)](spring/spingboot/base_project(webflux))
+
+[websocket](spring/spingboot/xdclass_websocket)
 
 ### javaee
 
