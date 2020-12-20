@@ -153,7 +153,7 @@ java experience | practice | demo
 
 ## basic
 
-[基础语法知识点练习](basic/source/README.md)
+[基础语法知识点练习](basic/source/)
 
 [求圆周长面积](basic/Circle.java)
 
